@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Array Demo</title>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <h2>array demo</h2>
+    <pre>
+      <code class="javascript" style="font-size: 18px;">
+        const array = require('array');
+
+        // arrayEqual demo
+        let arr1 = [1, 2, '11'];
+        let arr2 = [1, 2, '11'];
+        let arr3 = [1, 2, '11', 2];
+
+        console.log(array.arrayEqual(arr1, arr2)); // true
+        console.log(array.arrayEqual(arr2, arr3)); // false
+
+        // concat
+        console.log(array.concat(arr1, arr2, arr3)); // [1, 2, "11"]
+
+        // inArray
+        console.log(array.inArray(2, arr3)); // 1
+        console.log(array.inArray(2, arr3, 3)); // 3
+
+        // isArray
+        console.log(array.isArray(arr1)); // true
+
+        // join
+        console.log(array.join('_', arr1, arr2, arr3)); // 1_2_11_1_2_11_1_2_11_2
+
+        // unique
+        console.log(array.unique(arr3)); // [1, "11", 2]
+
+      </code>
+    </pre>
+    <script src='../../lib/demo/array.js'></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
