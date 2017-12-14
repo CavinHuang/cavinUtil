@@ -19,7 +19,7 @@ if (env === 'build') {
 let entry = {
   Library:__dirname + '/src/index.js',
 };
-let modules = ['array', 'url'];
+let modules = ['array', 'url', 'date'];
 
 for (let i = 0; i < modules.length; i++) {
   // 源码
